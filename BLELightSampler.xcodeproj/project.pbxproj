@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		C3E275B12E4C9B770000DB02 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = C3E275B02E4C9B770000DB02 /* ComposableArchitecture */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		C3E275A12E4C960C0000DB02 /* BLELightSampler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BLELightSampler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3E275B12E4C9B770000DB02 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +70,7 @@
 			);
 			name = BLELightSampler;
 			packageProductDependencies = (
+				C3E275B02E4C9B770000DB02 /* ComposableArchitecture */,
 			);
 			productName = BLELightSampler;
 			productReference = C3E275A12E4C960C0000DB02 /* BLELightSampler.app */;
@@ -94,6 +100,9 @@
 			);
 			mainGroup = C3E275982E4C960C0000DB02;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				C3E275AF2E4C9B770000DB02 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = C3E275A22E4C960C0000DB02 /* Products */;
 			projectDirPath = "";
@@ -324,6 +333,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C3E275AF2E4C9B770000DB02 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.21.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C3E275B02E4C9B770000DB02 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C3E275AF2E4C9B770000DB02 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C3E275992E4C960C0000DB02 /* Project object */;
 }
