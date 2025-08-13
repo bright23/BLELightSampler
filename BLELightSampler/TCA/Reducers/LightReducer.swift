@@ -21,20 +21,11 @@ public struct LightFeature {
     public init() {}
   }
   
-  public enum Action: Equatable {
-    case onAppear
-    case scanDevices
-    case devicesDiscovered([BLEDevice])
-    case selectDevice(BLEDevice)
-    case setBrightness(Double)
-    case bleUpdate(Result<Double, BLEError>)
-  }
-  
   @Dependency(\.bleClient) var bleClient
   
   public init() {}
   
-  public func reduce(into state: inout State, action: Action) -> Effect<Action> {
+  public func reduce(into state: inout State, action: LightAction) -> Effect<LightAction> {
     switch action {
     case .onAppear:
       return .send(.scanDevices)
@@ -85,6 +76,12 @@ public struct LightFeature {
       case .failure:
         state.errorMessage = "Failed to update."
       }
+      return .none
+
+    case .disconnectTapped:
+      state.connectedDevice = nil
+      state.isLoading = false
+      state.errorMessage = nil
       return .none
     }
   }

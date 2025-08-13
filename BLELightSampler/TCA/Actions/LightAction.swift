@@ -14,4 +14,5 @@ public enum LightAction: Equatable {
   case setBrightness(Double)
   case bleUpdate(Result<Double, BLEError>)
   case devicesDiscovered([BLEDevice])
+  case disconnectTapped
 }
